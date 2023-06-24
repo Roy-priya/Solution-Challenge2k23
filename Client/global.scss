@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.app__navbar {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+    backdrop-filter: blur(4px);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    box-shadow: 0 0 15px gray;
+    display: none;
+
+    .app__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .cl-custom {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo {
+            margin-right: 8px;
+            width: 55px;
+            border-radius: 50%;
+            background-color: aliceblue;
+            padding: 5px 7.5px;
+        }
+    }
+
+    .app__menu {
+
+        .menu__items {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 18px;
+            margin: 0 15px;
+            cursor: pointer;
+            transition: all .2s;
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                background-color: white;
+                padding: 5px 10px;
+                border-radius: 2px;
+                padding-bottom: 3px;
+            }
+        }
+
+        .m-0 {
+            margin-left: 0;
+        }
+
+        .ml-0 {
+            margin-right: 0;
+        }
+    }
+}
+
+.active {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 2px;
+    padding-bottom: 3px;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 300px;
+    margin-left: -125px;
+    background-color: lightseagreen;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 2%;
+    bottom: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+
+    to {
+        right: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+
+    to {
+        right: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        right: 30px;
+        opacity: 1;
+    }
+
+    to {
+        right: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        right: 30px;
+        opacity: 1;
+    }
+
+    to {
+        right: 0;
+        opacity: 0;
+    }
+}
+
+
+.dropbtn {
+    background-color: none;
+    border: none;
+    outline: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    background-color: #f9f9f9;
+    border-radius: 2px;
+    min-width: 230px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 15px 19px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

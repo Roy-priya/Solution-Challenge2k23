@@ -1,0 +1,137 @@
+.app__login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .app__register {
+        width: 40%;
+        height: 100%;
+        background-color: #5db299;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .app__register__header {
+            font-size: 45px;
+            color: white;
+            font-weight: bold;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .app__register__body {
+            color: whitesmoke;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 100;
+            width: 500px;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .app__register__divider {
+            width: 150px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            margin-top: 15px;
+            height: 2px;
+            background-color: white;
+        }
+
+        .app__register__button {
+            padding: 12px 25px;
+            margin-top: 80px;
+            width: 300px;
+            cursor: pointer;
+            background: none;
+            border: 1px solid white;
+            font-weight: bold;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all .5s ease;
+            display: flex;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: white;
+                color: lightseagreen;
+            }
+        }
+    }
+
+    .app__login__main {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .app__login__header {
+            font-size: 45px;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+        }
+
+        .app__login__divider {
+            width: 250px;
+            height: 3px;
+            margin: 20px 0;
+            border-radius: 5px;
+            background-color: #5db299;
+        }
+
+        input {
+            width: 450px;
+            height: 55px;
+            padding: 10px 30px;
+            background-color: #c5cfcd;
+            border: 0;
+            color: black;
+            outline: 0;
+            border-radius: 5px;
+            margin: 5px 0;
+            margin-bottom: 15px;
+        }
+
+        img {
+            width: 40px;
+            margin-top: 10px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 5px;
+            margin-bottom: 30px;
+            border: 1px solid #5db299;
+        }
+
+        button {
+            width: 450px;
+            border: 0;
+            outline: 0;
+            padding: 5px 30px;
+            height: 53px;
+            border-radius: 5px;
+            margin-top: 40px;
+            background-color: white;
+            border: 1px solid #5db299;
+            background-color: #5db299;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all .3s ease;
+
+            &:hover {
+                background-color: white;
+                color: #5db299;
+            }
+        }
+    }
+}

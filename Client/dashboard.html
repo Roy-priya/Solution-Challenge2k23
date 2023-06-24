@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <title>Dashboard - MedWeb</title>
+</head>
+
+<body>
+    <div id="snackbar">Some text some message..</div>
+    <div class="app__dashboard">
+        <div class="app__sidebar">
+            <div class="app__sidebar__logo">
+                <img src="../assets/text.png" alt="">
+            </div>
+            <div class="app__sidebar__menu">
+                <div class="sidebar__menu__item active" id="dashboard__menu" onclick="changePage('dashboard')">
+                    <img src="../assets/dashboard.png" alt="">
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar__menu__item" id="hospitals__menu" onclick="changePage('hospitals')">
+                    <img src="../assets/nearby.png" alt="">
+                    <span>Nearby Hospitals</span>
+                </div>
+                <div class="sidebar__menu__item" id="emergency__menu" onclick="changePage('emergency')">
+                    <img src="../assets/emergency.png" alt="">
+                    <span>Emergency</span>
+                </div>
+                <div class="sidebar__menu__item">
+                    <img src="../assets/chatbot.png" alt="">
+                    <span>Medbot</span>
+                </div>
+                <div class="sidebar__menu__item">
+                    <img src="../assets/community.png" alt="">
+                    <span>Community</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="app__main app__dashboard__main" id="dashboard">
+            <div class="app__dashboard__topbar">
+                <div class="app__dashboard__name">
+                    <span class="name" id="name">Hi Sarin👋</span>
+                    <span class="welcome">Welcome to Medweb</span>
+                </div>
+                <div class="app__dashboard__date" id="date"></div>
+            </div>
+        </div>
+        <div class="app__main app__dashboard__main" id="hospitals">
+            <div class="app__dashboard__header">
+                <span>
+                    Get the information about all the best nearby hospitals!
+                </span>
+            </div>
+            <div class="map__wrapper">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="app__main app__dashboard__main" id="emergency">
+            <div class="app__dashboard__header">
+                <span>
+                    Send an emergency request to any hospital near you!
+                </span>
+            </div>
+
+            <div class="map__wrapper">
+                <div id="map2"></div>
+            </div>
+
+            <div class="hospital__info__wrapper" id="emergency__wrapper">
+                <span class="hospital__name" id="hospital__name">Hospital name : Lorem ipsum dolor sit amet consectetur
+                    adipisicing.</span>
+                <span class="hospital__address" id="hospital__address">Hospital address : Lorem ipsum dolor sit amet
+                    consectetur
+                    adipisicing elit. Minus voluptate maxime quasi, assumenda veniam iure!</span>
+                <span class="hospital__status" id="hospital__status">Hospital status : Operational</span>
+                <span class="hospital__status" id="hospital__rating">Hospital ratings : 3/5</span>
+                <button onclick="sendEmergencyRequest()">Send Emergency Request</button>
+            </div>
+        </div>
+    </div>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOwpT84IbtYFLdMT9Nclo-jZAJyPaauMM&libraries=places&callback=initMap&v=weekly"
+        defer></script>
+</body>
+<script src="../js/dashboard.js"></script>
+
+</html>

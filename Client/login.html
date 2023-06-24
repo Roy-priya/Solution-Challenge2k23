@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <title>Login - MedWeb</title>
+</head>
+
+<body>
+    <div id="snackbar">Some text some message..</div>
+    <div class="app__login">
+        <div class="app__register">
+            <span class="app__register__header">
+                Let's Get Started!
+            </span>
+            <div class="app__register__divider"></div>
+            <span class="app__register__body">
+                To access our services and features and stay connected with us, please register with your personal info
+            </span>
+            <a href="./signup.html" class="app__register__button">
+                Sign Up
+            </a>
+        </div>
+        <div class="app__login__main">
+            <div class="app__login__header">
+                Hi, Welcome Back!
+            </div>
+            <div class="app__login__divider"></div>
+            <img src="../assets/login.gif" alt="">
+            <input type="text" id="email" required placeholder="Email">
+            <input type="password" name="" id="password" required placeholder="Password">
+            <button onclick="loginUser()">Log In</button>
+        </div>
+    </div>
+</body>
+<script src="../js/login.js"></script>
+</html>
